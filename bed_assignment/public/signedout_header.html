@@ -1,0 +1,91 @@
+<nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo">SP Travels</a>
+      <ul class="right hide-on-med-and-down">
+        <!-- signed out nav buttons -->
+        <li><a href="#modal-login" class="modal-trigger">Login</a></li>
+        <li><a href="#modal-signup" class="modal-trigger">Signup</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <!-- signed out nav buttons -->
+        <li><a href="#modal-login" class="modal-trigger">Login</a></li>
+        <li><a href="#modal-signup" class="modal-trigger">Signup</a></li>
+
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+  <!-- Modal Structure -->
+  <div id="modal-login" class="modal">
+    <form id="login-form">
+      <div class="modal-content">
+        <h4>Login</h4>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="email" class="validate" id="email-login">
+            <label for="email-login">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input type="password" class="validate" id="pwd-login">
+            <label for="pwd-login">Password</label>
+          </div>
+        </div>
+        <div id="signin-error-msg"></div>
+        <!-- <a href="#modal-signup" class="modal-trigger waves-effect waves-light btn-large social linkedin">
+          <i class="fas fa-sign-in-alt"></i> No account? Sign Up Now!</a> -->
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-close waves-effect waves-light btn red lighten-1">Cancel</a>
+        <button onclick="login()" id="login" class="waves-effect waves-light btn teal lighten-1">Login</button>
+      </div>
+    </form>
+      
+    
+  </div>
+
+  <!-- Modal Structure -->
+  <div id="modal-signup" class="modal">
+    <form id="register">
+      <div class="modal-content">
+        <h4>Sign Up</h4>
+        <div id="signup-error-msg"></div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="uid" type="text" class="validate">
+            <label for="uid">Username</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="email" type="email" class="validate">
+            <label for="email">Email</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="pwd1" type="password" class="validate">
+            <label for="pwd1">Password</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="pwd2" type="password" class="validate">
+            <label for="pwd2">Re-Enter Password</label>
+          </div>
+        </div>
+        <!-- <a href="#modal-login" class="modal-trigger waves-effect waves-light btn-large social linkedin">
+          <i class="fas fa-sign-in-alt"></i> Have an account? Login Now!</a> -->
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="modal-close waves-effect waves-light btn red lighten-1">Cancel</a>
+        <button type="submit" class="waves-effect waves-light btn teal lighten-1">Sign Up</button>
+      </div>
+    </form>
+      
+
+    
+  </div>

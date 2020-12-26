@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SP Travel</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize-social.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/review.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row ">
+      <div class="col s12 ">
+        <img id="travel-img" class="materialboxed" style="width: 100%;" src="images/japan.jpg">
+      </div>
+      <div class="col s12">
+        <h1 id="title">3D2N Tokyo, Japan</h1>
+        <p id="travel-period" class="grey-text">28th March 2020 - 31st March 2020</p>
+        <p id="country" class="grey-text">Japan</p>
+        <div class="divider"></div>
+      </div>
+      <div class="col s12 section">
+        <h5>Description</h5>
+        <p id="description">Tokyo is a very cool place with lots of very nice buildings. Going there during the sakura season is a plus as you get to eat good food and sit under the sakura trees.</p>
+        <div class="divider"></div>
+      </div>
+
+      <div class="col s12 section">
+        <h5>Itinerary</h5>
+        <div id="itinerary-container" class="row">
+          <div class="col s12 m6">
+            <div class="card blue-grey darken-1" style="margin-left: 0; margin-right: 0;">
+              <div class="card-content white-text">
+                <span class="card-title">Day 1</span>
+                <p>cancelled due to covid.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col s12 m6">
+            <div class="card blue-grey darken-1" style="margin-left: 0; margin-right: 0;">
+              <div class="card-content white-text">
+                <span class="card-title">Day 2</span>
+                <p>Get some big chungus</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="card blue-grey darken-1" style="margin-left: 0; margin-right: 0;">
+              <div class="card-content white-text">
+                <span class="card-title">Day 3</span>
+                <p>Drink Milo</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 section">
+        <div class="divider"></div>
+        <h5>Price</h5>
+        <h6 id="price">SGD 2450</h6>
+        <!-- <div class="right-align">
+          <a onclick="M.toast({html: 'Added to cart!'})" class="right-align waves-effect waves-light btn-large social linkedin">
+            <i class="fas fa-cart-plus"></i>Add to Cart</a>
+        </div> -->
+          
+        </div>
+
+        <div class="col s12 section" style="margin-top: 5vh;">
+          <div class="divider"></div>
+          <h5>Reviews</h5>
+          <form id="review-form">
+            <div class="row">
+              <div class="col s12">
+                <h6 id="review-error-msg" class="red-text"></h6>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">rate_review</i>
+                <textarea id="review-textarea" class="materialize-textarea"></textarea>
+                <label for="review-textarea">Write a review!</label>
+              </div>
+              <div class="input-field col s5">
+                <i class="material-icons prefix">star</i>
+                <select id="rating-select">
+                  <option value="" disabled selected>Rate this listing</option>
+                  <option value="1">1 Star</option>
+                  <option value="2">2 Stars</option>
+                  <option value="3">3 Stars</option>
+                  <option value="4">4 Stars</option>
+                  <option value="5">5 Stars</option>
+                </select>
+              </div>
+              <div class="right-align">
+                <button type="submit" class="right-align waves-effect waves-light btn-large social google">
+                  <i class="fas fa-comment"></i>Post Review!</button>
+              </div>
+            </form>
+            </div>
+            
+
+          <div id="reviews-container" class="row">
+            <div class="col s12 left-align">
+              <div class="card horizontal review-card" style="margin-left: 0;">
+                <div class="card-image user-img red" style="background-image: url('images/bongo_cat.jpg');">
+                  <!-- <img src="images/background.jpg"> -->
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <h6>Chungus Says</h6>
+                    <p>yo this is so good must try yoooooo</p>
+                  </div>
+                  <div class="card-action">
+                    <div class="rating">
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star"></span>
+                    </div>
+                    <div>
+                      <p class="grey-text">2020-06-23 16:18:19</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col s12 left-align">
+              <div class="card horizontal review-card" style="margin-left: 0;">
+                <div class="card-image user-img red" style="background-image: url('../images/bruh.jpg');">
+                  <!-- <img src="images/background.jpg"> -->
+                </div>
+                <div class="card-stacked">
+                  <div class="card-content">
+                    <h6>Chungus Says</h6>
+                    <p>yo this is so good must try yoooooo</p>
+                  </div>
+                  <div class="card-action">
+                    <div class="rating">
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star checked"></span>
+                      <span class="fas fa-star"></span>
+                    </div>
+                    <div>
+                      <p class="grey-text">2020-06-23 16:18:19</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div style="height: 10vh;"></div>
+
+  </div>
+
+
+
+  <footer class="page-footer grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">BED Assignment 02</h5>
+          <p class="grey-text text-lighten-4">Made with Express and the Materialize CSS Framework</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Members</h5>
+          <ul>
+            <li>Loh Kar Wei</li>
+            <li>Jess Kwek Zhi Chen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      DISM/FT/2A/02 2020
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://kit.fontawesome.com/07a638cb97.js" crossorigin="anonymous"></script>
+  <script src="./js/user.js"></script>
+  <script src="./js/get_listing_details.js"></script>
+
+  </body>
+</html>
+

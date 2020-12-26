@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SP Travel</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize-social.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h1>Travel Packages</h1>
+      </div>
+      <div class="col s12">
+        <ul class="collapsible">
+          <li>
+            <div class="collapsible-header"><i class="material-icons">filter_list</i>Filter Options</div>
+            <div class="collapsible-body">
+              <form id="filter-form" method="post">
+                <div class="row">
+                  <div class="input-field col s12 m6">
+                    <input id="country-filter" type="text" class="validate">
+                    <label for="country-filter">Country</label>
+                  </div>
+                  <div class="input-field col s6 m3">
+
+                    <input id="travel-period-from-filter" type="text" class="datepicker">
+                    <label for="travel-period-from-filter">Date From</label>
+                  </div>
+                  <div class="input-field col s6 m3">
+
+                    <input id="travel-period-to-filter" type="text" class="datepicker">
+                    <label for="travel-period-to-filter">Date To</label>
+                  </div>
+                  <div class="input-field col s6 m3">
+                    <input id="min-price" type="number" class="validate">
+                    <label for="min-price">Min Price</label>
+                  </div>
+                  <div class="input-field col s6 m3">
+                    <input id="max-price" type="number" class="validate">
+                    <label for="max-price">Max Price</label>
+                  </div>
+                  <div class="col s10 right-align">
+                    <button type="button" class="red btn waves-effect waves-light" id="clear-filters">Clear
+                      <i class="material-icons right">clear</i>
+                    </button>
+                  </div>
+                  <div class="col s2 right-align">
+                    <button class="btn waves-effect waves-light" type="submit">Apply
+                      <i class="material-icons right">send</i>
+                    </button>
+                  </div>
+                </div>
+
+                
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <div id="travel-listing-container" class="row">
+      <div class="col s12 m12 l6 ">
+        <div class="card waves-effect waves-light hoverable modal-trigger" >
+          <div class="card-image">
+            <img id="travel-img" src="images/pompeii.jpg">
+            
+          </div>
+          <div class="card-content ">
+            <span id="title" class="card-title">7D6N Pompeii, Italy</span>
+            <p id="description">Tokyo is a very cool place with lots of very nice buildings. Going there during the sakura season is a plus as you get to eat good food and sit under the sakura trees.</p>
+            
+            
+            
+          </div>
+          <div class="card-action ">
+            <div class="row center ">
+              <p id="travel-period" class="grey-text col s6 ">Mar 2021</p>
+              <p id="price" class="grey-text col s6 ">SGD 2450</p>
+            </div>
+          </div>
+          
+        </div>
+
+        
+      </div>
+
+      <div class="col s12 m12 l6 ">
+        <div class="card waves-effect waves-light hoverable ">
+          <div class="card-image">
+            <img id="travel-img" src="images/japan.jpg">
+            
+          </div>
+          <div class="card-content ">
+            <span id="title" class="card-title">3D2N Tokyo, Japan</span>
+            <p id="description">Tokyo is a very cool place with lots of very nice buildings. Going there during the sakura season is a plus as you get to eat good food and sit under the sakura trees.</p>
+            
+            
+            
+          </div>
+          <div class="card-action ">
+            <div class="row center ">
+              <p id="travel-period" class="grey-text col s6 ">Mar 2021</p>
+              <p id="price" class="grey-text col s6 ">SGD 2450</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="col s12 m12 l6 ">
+        <div class="card waves-effect waves-light hoverable ">
+          <div class="card-image">
+            <img id="travel-img" src="images/bangkok.jpg">
+            
+          </div>
+          <div class="card-content ">
+            <span id="title" class="card-title">2D1N Bangkok, Thailand</span>
+            <p id="description">Tokyo is a very cool place with lots of very nice buildings. Going there during the sakura season is a plus as you get to eat good food and sit under the sakura trees.</p>
+            
+            
+          </div>
+          <div class="card-action ">
+            <div class="row center ">
+              <p id="travel-period" class="grey-text col s6 ">Mar 2021</p>
+              <p id="price" class="grey-text col s6 ">SGD 2450</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+
+
+  <footer class="page-footer grey darken-2" style="margin-top: 20vh;">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">BED Assignment 02</h5>
+          <p class="grey-text text-lighten-4">Made with Express and the Materialize CSS Framework</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Members</h5>
+          <ul>
+            <li>Loh Kar Wei</li>
+            <li>Jess Kwek Zhi Chen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      DISM/FT/2A/02 2020
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://kit.fontawesome.com/07a638cb97.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/user.js"></script>
+  <script src="./js/get_travel_listing.js"></script>
+  <script src="./js/filter_listings.js"></script>
+
+  </body>
+</html>
+

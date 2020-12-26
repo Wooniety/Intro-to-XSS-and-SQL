@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SP Travel</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize-social.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/admin.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+
+  <div class="container">
+    <div class="row">
+      <div class="col s12">
+        <h1 class="purple-text text-lighten-1">Admin Console</h1>
+      </div>
+      
+    </div>
+
+    <div class="row">
+      <div class="col s12">
+        <ul class="tabs" style="margin-bottom: 3vh;">
+          <li class="tab col s6"><a href="#edit-travel-container">Edit Travel Packages</a></li>
+          <li id="itinerary" class="tab col s6"><a href="#manage-itinerary">Manage Itinerary</a></li>
+        </ul>
+      </div>
+      <div id="edit-travel-container" class="col s12">
+        <form id="travel" method="post">
+          <div class="row">
+            <div class="input-field col s12" style="margin-bottom: 5vh;">
+              <input id="title" type="text" class="validate">
+              <label for="title">Title</label>
+            </div>
+            
+
+            <div class="input-field col s6 m3">
+
+              <input id="travel-period-from" type="text" class="datepicker">
+              <label for="travel-period-from">Date From</label>
+            </div>
+            <div class="input-field col s6 m3">
+
+              <input id="travel-period-to" type="text" class="datepicker">
+              <label for="travel-period-to">Date To</label>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input id="country" type="text" class="validate">
+              <label for="country">Country</label>
+            </div>
+
+            <div class="file-field input-field col s12 m6">
+            
+              <div class="btn">
+                <span>Image File</span>
+                <input id="image" type="file" accept='image/*'>
+              </div>
+              <div class="file-path-wrapper">
+                <input class="file-path validate" type="text">
+              </div>
+            </div>
+
+            <div class="input-field col s12 m6">
+              <input id="price" type="number" onkeydown="return event.keyCode !== 69" class="validate">
+              <label for="price">Price (SGD)</label>
+            </div>
+
+            <div class="input-field col s12" style="margin-top: 5vh;">
+              <textarea id="description" class="materialize-textarea"></textarea>
+              <label for="description">Description</label>
+            </div>
+
+            <div class="right-align">
+            <a style="margin-top: 3vh;" id="delete" class="right-align waves-effect waves-light btn-large social google">
+                <i class="fas fa-trash-alt"></i>Delete Travel Listing</a>
+              <a style="margin-top: 3vh;" id="update" class="right-align waves-effect waves-light btn-large social whatsapp">
+                <i class="fas fa-plus-square"></i>Update Travel Listing</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div id="manage-itinerary" class="col s12">
+        <table class="highlight responsive-table">
+            <thead>
+              <th>Day</th>
+              <th colspan="2">Activity</th>
+            </thead>
+            <tbody id="data">
+              <tr>
+                <td><input id="day" name="Day" type="number" onkeydown="return event.keyCode !== 69"><label for="Day">Day:</label></td>
+                <td colspan="2"><input id="activity" name="Activity" type="text"><label for="Day">Activity:</label></td>              
+              </tr>
+            </tbody>
+        </table>
+        <div class="right-align">
+          <a id="add" style="margin-top: 3vh;" id="update" class="right-align waves-effect waves-light btn-large social whatsapp">
+            <i class="fas fa-plus-square"></i>Add Itinerary</a>    
+        </div>
+       
+      </div>
+    </div>
+
+    <div style="height: 5vh;"></div>
+  </div>
+
+
+
+  <footer class="page-footer grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">BED Assignment 02</h5>
+          <p class="grey-text text-lighten-4">Made with Express and the Materialize CSS Framework</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Members</h5>
+          <ul>
+            <li>Loh Kar Wei</li>
+            <li>Jess Kwek Zhi Chen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      DISM/FT/2A/02 2020
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://kit.fontawesome.com/07a638cb97.js" crossorigin="anonymous"></script>
+  <script src="./js/user.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/edit_travel_listing.js"></script>
+  </body>
+</html>
+

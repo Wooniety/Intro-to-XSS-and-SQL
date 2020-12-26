@@ -1,0 +1,95 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+  .parallax img{
+    /* background-position: top; */
+    position: absolute;
+    bottom: 0;
+  }
+
+.carousel{
+  min-height: 50vh;
+}
+
+.carousel .carousel-item{
+  background-size: cover;
+  background-position: center;
+  /* opacity: 20%; */
+}
+
+.img-banner{
+  background-image: url("/images/background.jpg");
+}
+
+/* .img-banner img{
+  width: 100%;
+  height: auto;
+} */
+
+.card{
+  margin: 10%;
+}
+.card .row .col{
+  margin: 0;
+}
+
+@media only screen and (min-width : 992px) {
+  /* .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  } */
+  /* .carousel{
+    min-height: 80vh;
+  } */
+}
+
+@media only screen and (max-width : 600px) {
+  /* #index-banner .section {
+    top: 0;
+  } */
+  /* .carousel{
+    min-height: 100vh;
+  } */
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}

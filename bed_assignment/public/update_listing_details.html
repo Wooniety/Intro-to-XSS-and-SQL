@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SP Travel</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/materialize-social.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/review.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+
+
+  <div class="container">
+    <h2>Update Details</h2>
+    <form method="post">
+      <div class="row">
+        <div class="input-field col s12" style="margin-bottom: 5vh;">
+          <input value="Trip to jaPAN YEEET" id="title" type="text" class="validate">
+          <label for="title">Title</label>
+        </div>
+        
+        <!-- set dates to default value too -->
+        <div class="input-field col s6 m3">
+
+          <input id="travel-period-from" type="text" class="datepicker">
+          <label for="travel-period-from">Date From</label>
+        </div>
+        <div class="input-field col s6 m3">
+
+          <input id="travel-period-to" type="text" class="datepicker">
+          <label for="travel-period-to">Date To</label>
+        </div>
+
+        <div class="input-field col s12 m6">
+          <input value="Japan" id="country" type="text" class="validate">
+          <label for="country">Country</label>
+        </div>
+
+        <div class="file-field input-field col s12 m6">
+        
+          <div class="btn">
+            <span>Image File</span>
+            <input id="image" type="file">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+
+        <div class="input-field col s12 m6">
+          <input value="10000" id="price" type="number" class="validate">
+          <label for="price">Price (SGD)</label>
+        </div>
+
+        <div class="input-field col s12" style="margin-top: 5vh;">
+          <textarea id="description" class="materialize-textarea">Dude its hella fun need to try</textarea>
+          <label for="description">Description</label>
+        </div>
+
+        <div class="right-align">
+          <a id="delete-listing" style="margin-top: 3vh;" class="right-align waves-effect waves-light btn-large social google">
+            <i class="fas fa-trash"></i>Delete Listing</a>
+          <a id="update" style="margin-top: 3vh;" class="right-align waves-effect waves-light btn-large social linkedin">
+            <i class="fas fa-plus-square"></i>Update Listing Details</a>
+        </div>
+
+        <div class="divider" style="margin-top: 3vh;"></div>
+      </div>
+    </form>
+
+    <div class="row">
+      <div class="col s12 section">
+        <h5>Manage Itinerary</h5>
+        <div id="itinerary-container" class="row">
+          <div class="col s12 m6">
+            <div class="card blue-grey darken-1" style="margin-left: 0; margin-right: 0;">
+              <div class="card-content white-text">
+                <a onclick="M.toast({html: 'Activity Deleted!'})" class="btn-floating btn-large halfway-fab waves-effect waves-light red"><i class="material-icons">delete</i></a>
+                <span class="card-title">Day 1</span>
+                <p>cancelled due to covid.</p>
+              </div>
+            </div>
+          </div>
+          
+
+          <!-- this card should always be at the back -->
+          <div class="col s12 m6">
+            <div class="card white darken-1">
+              <div class="card-content">
+                <span class="card-title">Add Itinerary</span>
+                <div class="row">
+              
+                  <div class="input-field col s12">
+                    <input id="day" type="text" class="validate">
+                    <label for="day">Day</label>
+                  </div>
+                  <div class="input-field col s12" style="margin-top: 1vh;">
+                    <textarea id="activity" class="materialize-textarea"></textarea>
+                    <label for="activity">Activity</label>
+                  </div>
+                </div>
+              </div>
+              <div class="card-action right-align">
+                <a onclick="M.toast({html: 'Itinerary Added!'})" class="right-align waves-effect waves-light btn-large social linkedin">
+                  <i class="fas fa-plus-square"></i>Add Activity</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 10vh;"></div>
+
+  </div>
+
+
+
+  <footer class="page-footer grey darken-2">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">BED Assignment 02</h5>
+          <p class="grey-text text-lighten-4">Made with Express and the Materialize CSS Framework</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Members</h5>
+          <ul>
+            <li>Loh Kar Wei</li>
+            <li>Jess Kwek Zhi Chen</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      DISM/FT/2A/02 2020
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="https://kit.fontawesome.com/07a638cb97.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/user.js"></script>
+  <script src="./js/form.js"></script>
+  <script src="./js/edit_travel_listing.js"></script>
+
+  </body>
+</html>
+
