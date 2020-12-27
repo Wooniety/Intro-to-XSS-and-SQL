@@ -105,8 +105,8 @@ DROP TABLE IF EXISTS `users`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `users` (
   `userid` INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-  `username` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
+  `username` varchar(255) UNIQUE NOT NULL,
+  `email` varchar(255) UNIQUE NOT NULL,
   `profile_pic_url` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `salt` varchar(255) NOT NULL,
