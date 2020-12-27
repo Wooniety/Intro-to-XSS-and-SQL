@@ -53,7 +53,7 @@ const login_user = async (email, password) => {
     const sql = "select email from users where email = '" + email + "'";
     const salt = await dbConn.query(sql,[]);
     const given_hash = await generate_hash_password(password, salt.rows[0].salt);
-    const results = await dbConn.query("select password, salt, userid, role, username from users where email = '" + email + "' and password = '" + given_hash + "'",[]);
+    const results = await dbConn.query("select password, salt, userid, role, username from users where email = '" + email + "' and password = '" + given_hash[0] + "'",[]);
     if (results.length == 0) throw new Error("Wrong password");
     else {
         return {"message":`Login Successful, welcome user ${results.rows[0].username}`,"user":{"userid":results.rows[0].userid,"role":results.rows[0].role}};
