@@ -4,7 +4,8 @@
 - NodeJS
 - npm
 
-## To Run
+## Setup
 1. `cd ` into `sed_travels`
-2. Run `npm start`
-3. On a browser, preferably Firefox, go to `localhost:3000`
+2. If it's the firsst time, run `npm install`
+3. Run `npm start`
+4. On a browser, go to `localhost:3000`
