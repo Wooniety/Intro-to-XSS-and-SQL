@@ -30,7 +30,7 @@ function filterTravelListings(){
 
     axios.post("/travel/filter", body, {headers: { 'Content-Type': 'multipart/form-data' }}).then((resp) => {
         console.log(resp);
-
+        
         // func from get_travel_listings.js
         fillTravelListings(resp);
     })
