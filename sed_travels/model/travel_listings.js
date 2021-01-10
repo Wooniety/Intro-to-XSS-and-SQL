@@ -29,8 +29,11 @@ const get_travel_listings_by_id = async (id) => {
     return results.rows
 }
 
-const filter_travel_listings = async (country, dateFrom, dateTo, minPrice, maxPrice) => {
+const filter_travel_listings = async (search, country, dateFrom, dateTo, minPrice, maxPrice) => {
     let sql = "select * from travel_listings where ", conditions = []
+    if (search != ""){
+        sql += `instr(title, '${search}') > 0 and`;
+    }
     if (country != "") {
         sql += "country like '" + `${country}' and `;
     }

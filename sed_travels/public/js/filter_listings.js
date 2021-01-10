@@ -13,6 +13,7 @@ $("document").ready(() => {
 })
 
 function filterTravelListings(){
+    let search = $("#search-filter").val()
     let country = $("#country-filter").val();
     let dateFrom = $("#travel-period-from-filter").val();
     let dateTo = $("#travel-period-to-filter").val();
@@ -20,6 +21,7 @@ function filterTravelListings(){
     let maxPrice = $("#max-price").val();
     console.log(dateFrom)
     let body = new FormData();
+    body.append("search", search);
     body.append("country", country);
     body.append("dateFrom", dateFrom);
     body.append("dateTo", dateTo);

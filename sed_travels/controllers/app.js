@@ -93,13 +93,14 @@ app.get("/admin",jwt.checkAdmin,async(req,res)=>{
 
 app.post("/travel/filter", async (req, res) => {
     try{
+        let search = req.body.search;
         let country = req.body.country;
         let dateFrom = req.body.dateFrom;
         let dateTo = req.body.dateTo;
         let minPrice = req.body.minPrice;
         let maxPrice = req.body.maxPrice;
         console.log(req.body)
-        const results = await travel_listings.filter_travel_listings(country, dateFrom, dateTo, minPrice, maxPrice);
+        const results = await travel_listings.filter_travel_listings(search, country, dateFrom, dateTo, minPrice, maxPrice);
         res.status(200).send(results);
     }catch(err){
         console.log(err);
