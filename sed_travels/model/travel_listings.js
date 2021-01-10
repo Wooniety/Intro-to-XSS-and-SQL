@@ -30,7 +30,7 @@ const get_travel_listings_by_id = async (id) => {
 }
 
 const filter_travel_listings = async (country, dateFrom, dateTo, minPrice, maxPrice) => {
-    let sql = "select * from travel_listings where ", conditions = [], values = [];
+    let sql = "select * from travel_listings where ", conditions = []
     if (country != "") {
         sql += "country like '" + `${country}' and `;
     }
@@ -52,7 +52,9 @@ const filter_travel_listings = async (country, dateFrom, dateTo, minPrice, maxPr
     //     conditions = conditions.join("and ");
     //     sql = sql + conditions;
     // }
-
+    if(sql.substr(sql.endsWith("and"))){
+        sql = sql.substring(0,sql.length-4)
+    }
     const results = await dbConn.query(sql);
     return results.rows;
 }
