@@ -101,7 +101,7 @@
         <div class="col l6 s12">
           <h5 class="white-text">BED Assignment 02</h5>
           <p class="grey-text text-lighten-4">Made with Express and the Materialize CSS Framework</p>
-
+          <div id="language-display"></div>
 
         </div>
         
@@ -120,6 +120,11 @@
   <script src="https://kit.fontawesome.com/07a638cb97.js" crossorigin="anonymous"></script>
   <script src="./js/user.js"></script>
   <script src="js/init.js"></script>
+
+  <script>
+    let language = URLSearchParams.get("language");
+    $('#language-display').html(`<p>Language: ${language}</p>`); 
+  </script>
 
   </body>
 </html>
