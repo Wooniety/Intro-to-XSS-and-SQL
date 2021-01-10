@@ -30,6 +30,11 @@ function filterTravelListings(){
 
     console.log(body);
 
+    // Display search back
+    if (search != ""){
+        $('#search-results').html(`<p>You searched for ${search}</p>`);
+    }
+
     axios.post("/travel/filter", body, {headers: { 'Content-Type': 'multipart/form-data' }}).then((resp) => {
         console.log(resp);
         
