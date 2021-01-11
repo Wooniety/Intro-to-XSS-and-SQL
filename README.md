@@ -12,3 +12,6 @@
 
 ## Resetting the database
 Overwrite [sad.sqlite](sed_travels/sad.sqlite) with [sad.sqlite.backup](sed_travels/sad.sqlite.backup)
+
+## Links
+[Link to the online workshop](https://web.microsoftstream.com/video/f9ad8ffb-2bb7-48aa-80cd-6a99e4fabd48)
